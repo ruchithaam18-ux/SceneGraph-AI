@@ -1,0 +1,30 @@
+SCENEGRAPH AI — FULL-STACK WEBSITE (V2)
+======================================
+
+THE WEBSITE IS NOT A STREAMLIT PROTOTYPE.
+It is a custom HTML/CSS/JS interface + FastAPI Python backend + SQL database.
+
+RUN ON WINDOWS
+1. Extract the ZIP and open SceneGraph_Production in VS Code.
+2. New Terminal:
+      py -3 -m venv .venv
+      .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+      .\.venv\Scripts\python.exe -m uvicorn app:app --host 127.0.0.1 --port 8000
+3. Open http://127.0.0.1:8000
+4. Click 'Create an account'. A 12-scene sample project loads automatically.
+5. Generate a shooting schedule, try blocking an actor and replanning.
+
+PUBLIC WEBSITE WITH GITHUB PAGES
+GitHub Pages cannot host Python or a database. Follow this sequence:
+  A. Push the whole extracted folder to a GitHub repository.
+  B. Create a managed PostgreSQL database (e.g., Supabase).
+  C. Deploy this Python backend on Render with DATABASE_URL and CORS_ORIGINS.
+  D. Put the PUBLIC Render API base URL into docs/config.js.
+  E. Enable GitHub Pages from main /docs.
+
+Detailed guide: documentation/DEPLOY_GITHUB_PAGES.md
+Main README: README.md
+Tests: python -m pytest -q
+
+DO NOT COMMIT private database credentials or passwords to GitHub.
+No public URL is included because deployment requires your hosting accounts.

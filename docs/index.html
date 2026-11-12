@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101419"><meta name="description" content="SceneGraph Studio: intelligent screenplay analysis and production optimization"><link rel="icon" href="./favicon.svg"><link rel="stylesheet" href="./styles.css"><title>SceneGraph — Production intelligence</title></head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand"><span class="brand-mark"><span></span><span></span><span></span></span><div><strong>SCENE<span>GRAPH</span></strong><small>PRODUCTION INTELLIGENCE</small></div></div>
+    <div class="side-project"><span class="tiny-label">CURRENT PRODUCTION</span><div class="project-chip"><span class="project-dot"></span><strong id="sidebarProject">Loading…</strong><span class="ellipsis">•••</span></div><select aria-label="Select project" id="projectSelect" class="project-select"></select></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav id="nav" aria-label="Main navigation">
+      <button data-view="overview" class="nav-link active"><span class="nav-glyph">◫</span> Overview<span class="nav-key">01</span></button>
+      <button data-view="studio" class="nav-link"><span class="nav-glyph">▤</span> Script studio<span class="nav-key">02</span></button>
+      <button data-view="graph" class="nav-link"><span class="nav-glyph">⌘</span> Knowledge graph<span class="nav-key">03</span></button>
+      <button data-view="planner" class="nav-link"><span class="nav-glyph">▦</span> Production planner<span class="nav-key">04</span></button>
+      <button data-view="continuity" class="nav-link"><span class="nav-glyph">◇</span> Continuity lab<span class="nav-key">05</span></button>
+      <button data-view="analytics" class="nav-link"><span class="nav-glyph">◷</span> Analytics lab<span class="nav-key">06</span></button>
+    </nav>
+    <div class="sidebar-bottom"><div class="system-pill"><span class="pulse"></span> PRIVATE ACCOUNT · SQL DATABASE</div><p>Built with Python and independent engineering modules.</p><div class="sidebar-caption">SCENEGRAPH STUDIO <span>V1.0</span></div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb">WORKSPACE <span>/</span> <strong id="currentCrumb">OVERVIEW</strong></div><div class="top-actions"><div class="top-status"><span class="pulse"></span><span>ENGINE ONLINE</span></div><button class="ghost-button" id="logoutBtn" title="Sign out">SIGN OUT</button><button class="ghost-button" id="deleteProjectBtn" title="Delete this production">DELETE</button><button class="ghost-button" id="exportBtn" title="Download current production report">⇩ <span>EXPORT</span></button><button class="button button-primary" id="newProjectBtn">+ NEW PROJECT</button></div></header>
+    <main id="content" class="content"><div class="loading">INITIALIZING PRODUCTION SYSTEM<span class="dots">...</span></div></main>
+    <footer class="footer">SCENEGRAPH / ENGINEERING STUDIO <span>SCENES ARE DATA. STORIES ARE CONNECTIONS.</span> <span>© SCENEGRAPH AI · PRODUCTION SYSTEM</span></footer>
+  </div>
+</div>
+<div id="authBackdrop" class="auth-backdrop">
+ <div class="auth-film-strip">S C E N E G R A P H <span>•</span> P R O D U C T I O N&nbsp;&nbsp;I N T E L L I G E N C E</div>
+ <div class="auth-layout"><div class="auth-editorial">
+  <span class="auth-kicker">THE CREATIVE OPERATIONS SYSTEM</span>
+  <h1>Make every<br>scene <em>count.</em></h1>
+  <p>From the first line of a screenplay to the final call sheet. Structure your story, map the connections, and schedule the impossible.</p>
+  <div class="auth-feature-row"><span>01 / PARSE</span><span>02 / CONNECT</span><span>03 / OPTIMIZE</span></div>
+  <div class="auth-decor"><div class="auth-reel"></div><div class="auth-floating">SCENE 01<br>INT. STUDIO — NIGHT<br><b>A better way to create.</b></div></div>
+ </div><div class="auth-panel"><div class="auth-card">
+ <div class="auth-brand"><span class="auth-brand-mark">◈</span> SCENE<span>GRAPH</span> <small>AI</small></div>
+ <p class="auth-card-heading" id="authHeading">Welcome back.</p>
+ <p class="auth-card-desc" id="authDesc">Your productions. Your private workspace.</p>
+ <form id="authForm" class="auth-form">
+  <div class="field" id="nameField" style="display:none"><label>FULL NAME</label><input class="input" id="authName" autocomplete="name" maxlength="100" placeholder="Your name"></div>
+  <div class="field"><label>EMAIL ADDRESS</label><input type="email" class="input" id="authEmail" required autocomplete="email" placeholder="you@example.com"></div>
+  <div class="field"><label>PASSWORD</label><input type="password" class="input" id="authPassword" required autocomplete="current-password" placeholder="At least 10 characters"></div>
+  <div id="authError" class="auth-error" role="alert" hidden></div>
+  <button class="button button-primary auth-submit" id="authSubmit" type="submit">SIGN IN TO STUDIO ↗</button>
+ </form>
+ <p class="auth-toggle" id="authToggleWrap">New to SceneGraph? <button id="authToggle" type="button">Create an account</button></p>
+ <div id="serverConfig" class="server-config" hidden><p><b>API CONNECTION</b> — For GitHub Pages, connect your deployed Python backend.</p><label>BACKEND URL</label><input class="input" id="serverUrl" placeholder="https://your-backend.onrender.com"><button class="small-button" id="saveServerBtn" type="button">USE THIS BACKEND</button><small>For a public link that works for everyone, set the URL in <code>docs/config.js</code> before publishing.</small></div>
+ </div><div class="auth-note">SECURE WORKSPACE • PYTHON API • PERSISTENT DATABASE</div></div></div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="dialogBackdrop" class="dialog-backdrop hidden"><div class="dialog" id="dialog" role="dialog" aria-modal="true"></div></div>
+<script src="./config.js"></script><script src="./app.js" defer></script>
+</body></html>

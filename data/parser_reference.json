@@ -1,0 +1,9 @@
+{
+  "description": "Manually specified reference labels for the two bundled, authored demonstration screenplays. Not a real-world generalization benchmark.",
+  "scripts": [
+    {"file": "sample_script.fountain", "scene_headings": ["INT. EDITING LAB - DAY", "INT. COLLEGE CORRIDOR - DAY", "EXT. CAMPUS COURTYARD - DAY", "INT. EQUIPMENT ROOM - NIGHT", "INT. CAFETERIA - DAY", "INT. EDITING LAB - NIGHT", "EXT. CAMPUS COURTYARD - DAY", "INT. CLASSROOM - DAY", "INT. EQUIPMENT ROOM - DAY", "EXT. CAMPUS COURTYARD - EVENING", "INT. EDITING LAB - DAY", "INT. AUDITORIUM - NIGHT"],
+    "speakers": [["MIRA", "ARJUN"], ["MIRA", "ARJUN"], ["DEV", "MIRA"], ["DEV"], ["TARA", "ARJUN"], ["MIRA", "TARA"], ["DEV", "TARA"], ["ARJUN", "MIRA"], ["TARA", "DEV"], ["MIRA", "ARJUN"], ["TARA", "DEV"], ["ARJUN", "MIRA"]] },
+    {"file": "minimal.fountain", "scene_headings": ["INT. STUDIO - DAY", "EXT. ROOFTOP - NIGHT", "INT. STUDIO - NIGHT"],
+    "speakers": [["NORA"], ["ELI"], ["NORA", "ELI"]]}
+  ]
+}

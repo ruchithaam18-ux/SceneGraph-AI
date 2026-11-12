@@ -1,0 +1,11 @@
+{
+  "description":"Explicit annotated events in script order. Warnings are prompts for human review, not automatic NLP inferences.",
+  "cases":[
+    {"name":"loss_then_use","events":[{"id":1,"scene_id":1,"prop":"key","character":"MIRA","action":"ACQUIRE"},{"id":2,"scene_id":2,"prop":"key","character":"MIRA","action":"LOSE"},{"id":3,"scene_id":3,"prop":"key","character":"MIRA","action":"USE"}],"expected_warnings":1},
+    {"name":"repeated_loss","events":[{"id":1,"scene_id":1,"prop":"watch","character":"DEV","action":"LOSE"},{"id":2,"scene_id":2,"prop":"watch","character":"DEV","action":"LOSE"}],"expected_warnings":1},
+    {"name":"loss_then_recovery_then_use","events":[{"id":1,"scene_id":1,"prop":"bag","character":"ARJUN","action":"LOSE"},{"id":2,"scene_id":2,"prop":"bag","character":"ARJUN","action":"RECOVER"},{"id":3,"scene_id":3,"prop":"bag","character":"ARJUN","action":"USE"}],"expected_warnings":0},
+    {"name":"acquire_then_use","events":[{"id":1,"scene_id":1,"prop":"key","character":"TARA","action":"ACQUIRE"},{"id":2,"scene_id":2,"prop":"key","character":"TARA","action":"USE"}],"expected_warnings":0},
+    {"name":"unobserved_use","events":[{"id":1,"scene_id":1,"prop":"key","character":"MIRA","action":"USE"}],"expected_warnings":0},
+    {"name":"independent_characters","events":[{"id":1,"scene_id":1,"prop":"key","character":"ARJUN","action":"LOSE"},{"id":2,"scene_id":2,"prop":"key","character":"TARA","action":"USE"}],"expected_warnings":0}
+  ]
+}
